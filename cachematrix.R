@@ -6,11 +6,13 @@
 ## cacheSolve(z)                                # Inverse calculated
 ## cacheSolve(z)                                # From second call on, inverse is taken from cache
 
+## Sources: R Programming Assignment, R. Peng
+
+
 
 ## makeCacheMatrix sets up the cache that holds the inverse of the matrix. It also has functions for putting the inverse into
 ## the cache, and for retrieving it. makeCacheMatrix is actually a list: one can access the sub-function with the $ sign, as in
 ## makeCacheMatrix$get
-
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -25,6 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
          setsolve = setsolve,
          getsolve = getsolve)    
 }
+
 
 
 ## cacheSolve first checks whether the inverse exists in the cache, and if not, calculates it. solve is the R function that 
